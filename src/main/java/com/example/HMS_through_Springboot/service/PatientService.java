@@ -13,9 +13,19 @@ import java.util.Optional;
 public class PatientService {
 
     private final PatientRepository patientRepository;
+    private final ModelMapper modelMapper;
 
     @Transactional
-    public Optional<Patient> getPatientById(long id) {
-        return patientRepository.findById(id);
+    public PatientResponseDto getPatientById(Long patientId) {
+        Patient patient = patientRepository.findById(patientId).orElseThrow(() -> new EntityNotFoundException("Patient Not " +
+                "Found with id: " + patientId));
+        return modelMapper.map(patient, PatientResponseDto.class);
+    }
+
+    public List<PatientResponseDto> getAllPatients(Integer pageNumber, Integer pageSize) {
+        return patientRepository.findAllPatients(PageRequest.of(pageNumber, pageSize))
+                .stream()
+                .map(patient -> modelMapper.map(patient, PatientResponseDto.class))
+                .collect(Collectors.toList());
     }
 }
