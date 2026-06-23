@@ -1,5 +1,6 @@
 package com.example.HMS_through_Springboot.config;
 
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
