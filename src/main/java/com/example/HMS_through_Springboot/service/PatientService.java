@@ -1,12 +1,18 @@
 package com.example.HMS_through_Springboot.service;
 
+import com.example.HMS_through_Springboot.dto.PatientResponseDto;
 import com.example.HMS_through_Springboot.entity.Patient;
 import com.example.HMS_through_Springboot.repository.PatientRepository;
+import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
