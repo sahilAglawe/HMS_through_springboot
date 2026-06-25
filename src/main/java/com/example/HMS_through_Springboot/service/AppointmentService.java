@@ -1,5 +1,7 @@
 package com.example.HMS_through_Springboot.service;
 
+import com.example.HMS_through_Springboot.dto.AppointmentResponseDto;
+import com.example.HMS_through_Springboot.dto.CreateAppointmentRequestDto;
 import com.example.HMS_through_Springboot.entity.Appointment;
 import com.example.HMS_through_Springboot.entity.Doctor;
 import com.example.HMS_through_Springboot.entity.Patient;
@@ -9,6 +11,8 @@ import com.example.HMS_through_Springboot.repository.PatientRepository;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.*;
+import org.modelmapper.ModelMapper;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 
 import java.util.stream.Collectors;
