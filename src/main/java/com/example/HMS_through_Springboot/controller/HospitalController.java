@@ -1,6 +1,7 @@
 package com.example.HMS_through_Springboot.controller;
 
 import com.example.HMS_through_Springboot.dto.DoctorResponseDto;
+import com.example.HMS_through_Springboot.service.DoctorService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
