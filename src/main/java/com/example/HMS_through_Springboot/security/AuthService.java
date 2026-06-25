@@ -2,6 +2,8 @@ package com.example.HMS_through_Springboot.security;
 
 import com.example.HMS_through_Springboot.dto.LoginRequestDto;
 import com.example.HMS_through_Springboot.dto.LoginResponseDto;
+import com.example.HMS_through_Springboot.dto.SignUpRequestDto;
+import com.example.HMS_through_Springboot.dto.SignupResponseDto;
 import com.example.HMS_through_Springboot.entity.Patient;
 import com.example.HMS_through_Springboot.entity.type.AuthProviderType;
 import com.example.HMS_through_Springboot.repository.PatientRepository;
