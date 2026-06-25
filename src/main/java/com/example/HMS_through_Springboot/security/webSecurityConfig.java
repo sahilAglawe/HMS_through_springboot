@@ -12,6 +12,9 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 
+import static com.example.HMS_through_Springboot.entity.type.RoleType.ADMIN;
+import static com.example.HMS_through_Springboot.entity.type.RoleType.DOCTOR;
+
 @Configuration
 @RequiredArgsConstructor
 @Slf4j
