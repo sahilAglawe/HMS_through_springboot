@@ -1,0 +1,18 @@
+package com.example.HMS_through_Springboot.dto;
+
+import com.example.HMS_through_Springboot.entity.type.RoleType;
+import lombok.*;
+
+import java.util.HashSet;
+import java.util.Set;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class SignupRequestDto {
+    private String username;
+    private String password;
+    private String name;
+
+    private Set<RoleType> roles = new HashSet<>();
+}
