@@ -6,6 +6,7 @@ import com.example.HMS_through_Springboot.dto.SignUpRequestDto;
 import com.example.HMS_through_Springboot.dto.SignupResponseDto;
 import com.example.HMS_through_Springboot.entity.Patient;
 import com.example.HMS_through_Springboot.entity.type.AuthProviderType;
+import com.example.HMS_through_Springboot.entity.type.RoleType;
 import com.example.HMS_through_Springboot.repository.PatientRepository;
 import com.example.HMS_through_Springboot.repository.UserRepository;
 import jakarta.transaction.Transactional;
@@ -19,6 +20,8 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
+
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
