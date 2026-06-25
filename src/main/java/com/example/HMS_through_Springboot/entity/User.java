@@ -2,6 +2,7 @@ package com.example.HMS_through_Springboot.entity;
 
 import com.example.HMS_through_Springboot.entity.type.AuthProviderType;
 import com.example.HMS_through_Springboot.entity.type.RoleType;
+import com.example.HMS_through_Springboot.security.RolePermissionMapping;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
