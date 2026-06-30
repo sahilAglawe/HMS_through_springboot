@@ -19,6 +19,7 @@ public class AdminController {
 
     private final PatientService patientService;
     private final DoctorService doctorService;
+    
 
     @GetMapping("/patients")
     public ResponseEntity<List<PatientResponseDto>> getAllPatients(
